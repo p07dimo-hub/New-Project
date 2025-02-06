@@ -11,15 +11,15 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 
-# Page config
+
 st.set_page_config(page_title="Data Mining App", layout="wide")
 st.title("Web-Based Data Mining and Analysis App")
 
-# Sidebar navigation
+
 menu = ["Home", "Upload Data", "Visualization", "Feature Selection", "Classification", "Results", "Info"]
 choice = st.sidebar.selectbox("Navigation", menu)
 
-# Data loading
+
 def load_data():
     uploaded_file = st.file_uploader("Upload CSV, Excel, or TSV file", type=["csv", "xlsx", "tsv"])
     if uploaded_file:
